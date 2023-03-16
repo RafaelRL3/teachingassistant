@@ -9,7 +9,7 @@ export class AlunoService {
       this.alunos.push(aluno);
       result = aluno;
     }
-    return result;
+    return result as any;
   }
   cpfNaoCadastrado(cpf: string): boolean {
      return !this.alunos.find(a => a.cpf == cpf);
